@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Check, MessageCircle, ShieldCheck, BookOpen, TrendingUp, Lock } from "lucide-react";
 import { useEffect } from "react";
 import livroCover from "@/assets/livro-segredos-do-trade.png";
+import precoPromocional from "@/assets/preco-promocional.png";
+
 
 const WHATSAPP_URL =
   "https://xbotting.vercel.app/api/redirect/whatsapp?flowId=b3260b3d-18e3-4655-806c-989f0a95fcd6&text=" +
@@ -42,12 +44,12 @@ function WhatsAppButton({ label = "Falar no WhatsApp", pulse = false }: { label?
 
 function VslPlayer() {
   useEffect(() => {
-    const id = "vturb-player-script-6a42bd1f54f5a89ef8601746";
+    const id = "vturb-player-script-6aa095dd41105cb5210749b3";
     if (document.getElementById(id)) return;
     const s = document.createElement("script");
     s.id = id;
     s.src =
-      "https://scripts.converteai.net/adf170ce-1438-43d2-917b-e507e4056a4d/players/6a42bd1f54f5a89ef8601746/v4/player.js";
+      "https://scripts.converteai.net/0c9a654a-b497-48cd-bf97-f473b0e9e701/players/6aa095dd41105cb5210749b3/v4/player.js";
     s.async = true;
     document.head.appendChild(s);
   }, []);
@@ -56,7 +58,7 @@ function VslPlayer() {
     <div
       className="mt-6"
       dangerouslySetInnerHTML={{
-        __html: `<vturb-smartplayer id="vid-6a42bd1f54f5a89ef8601746" style="display:block;margin:0 auto;width:100%;max-width:400px;"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:177.77777777777777% 0 0;z-index:0;background-color:black;"></div></vturb-smartplayer>`,
+        __html: `<vturb-smartplayer id="vid-6aa095dd41105cb5210749b3" style="display:block;margin:0 auto;width:100%;"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:56.25% 0 0;z-index:0;background-color:black;"></div></vturb-smartplayer>`,
       }}
     />
   );
@@ -118,15 +120,14 @@ function Index() {
             />
           </div>
 
-          <div className="mt-6 text-center">
-            <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              De <span className="line-through">R$189,90</span> por
-            </p>
-            <p className="mt-1 text-4xl font-black text-primary-deep">
-              R$ 10
-              <span className="ml-1 align-top text-base font-bold">,00</span>
-            </p>
-            <p className="mt-1 text-xs text-muted-foreground">à vista ou parcelado no cartão</p>
+          <div className="mt-6 flex justify-center px-1">
+            <img
+              src={precoPromocional}
+              alt="De R$ 189,90 por R$ 20,00 à vista ou parcelado no cartão"
+              width={1024}
+              height={183}
+              className="h-auto w-full max-w-[360px] object-contain mix-blend-multiply"
+            />
           </div>
 
           <div className="mt-5 grid grid-cols-3 gap-2 rounded-2xl bg-white/70 p-3 text-center">
