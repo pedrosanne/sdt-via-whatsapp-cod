@@ -123,7 +123,7 @@ function Index() {
           <div className="mt-6 flex justify-center px-1">
             <img
               src={precoPromocional}
-              alt="De R$ 189,90 por R$ 20,00 à vista ou parcelado no cartão"
+              alt="De R$ 189,90 por R$ 10,00 à vista ou parcelado no cartão"
               width={1024}
               height={183}
               className="h-auto w-full max-w-[360px] object-contain mix-blend-multiply"
