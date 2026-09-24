@@ -6,7 +6,7 @@ import precoPromocional from "@/assets/preco-promocional.png";
 
 
 const WHATSAPP_URL =
-  "https://xbotting.vercel.app/api/redirect/whatsapp?flowId=b3260b3d-18e3-4655-806c-989f0a95fcd6&text=" +
+  "https://go.xbotting.com.br/api/redirect/whatsapp?flowId=b3260b3d-18e3-4655-806c-989f0a95fcd6&phone=5562996379794&text=" +
   encodeURIComponent("Eu quero comprar o Segredos do Trade!");
 
 export const Route = createFileRoute("/")({
