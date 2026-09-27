@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check, MessageCircle, ShieldCheck, BookOpen, TrendingUp, Lock } from "lucide-react";
-import { useEffect } from "react";
 import livroCover from "@/assets/livro-segredos-do-trade.png";
 import precoPromocional from "@/assets/preco-promocional.png";
 
@@ -43,24 +42,19 @@ function WhatsAppButton({ label = "Falar no WhatsApp", pulse = false }: { label?
 }
 
 function VslPlayer() {
-  useEffect(() => {
-    const id = "vturb-player-script-6aa095dd41105cb5210749b3";
-    if (document.getElementById(id)) return;
-    const s = document.createElement("script");
-    s.id = id;
-    s.src =
-      "https://scripts.converteai.net/0c9a654a-b497-48cd-bf97-f473b0e9e701/players/6aa095dd41105cb5210749b3/v4/player.js";
-    s.async = true;
-    document.head.appendChild(s);
-  }, []);
-
   return (
-    <div
-      className="mt-6"
-      dangerouslySetInnerHTML={{
-        __html: `<vturb-smartplayer id="vid-6aa095dd41105cb5210749b3" style="display:block;margin:0 auto;width:100%;"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:56.25% 0 0;z-index:0;background-color:black;"></div></vturb-smartplayer>`,
-      }}
-    />
+    <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-lg bg-black">
+      <div className="relative w-full pt-[56.25%]">
+        <iframe
+          className="absolute inset-0 h-full w-full"
+          src="https://www.youtube.com/embed/UrDaKZnJNG4"
+          title="Vídeo de Apresentação"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    </div>
   );
 }
 
